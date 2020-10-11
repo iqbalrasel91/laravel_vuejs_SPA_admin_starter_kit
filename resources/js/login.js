@@ -13,8 +13,11 @@ Vue.use(CxltToastr, toastrConfigs)
 
 window.Vue = require('vue');
 
+Vue.component('sidebar-component', require('./components/SidebarComponent.vue').default);
+
+
 const app = new Vue({
-    el: '#login',
+    el: '#app',
     router: routes,
 
 });

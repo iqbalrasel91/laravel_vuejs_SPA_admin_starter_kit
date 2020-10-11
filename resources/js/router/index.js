@@ -5,11 +5,10 @@ Vue.use(VueRouter)
 
 
 
-import Home from '../components/HomeComponent.vue'
+import Login from '../components/pages/login/LoginComponent.vue'
+import ForgotPassword from '../components/pages/login/ForgotPasswordComponent.vue'
 import Dashboard from '../components/pages/Dashboard/DashboardComponent.vue'
-import CategoryList from '../components/pages/category/ListComponent.vue'
-import CategoryCrate from '../components/pages/category/CreateComponent'
-import CategoryEdit from '../components/pages/category/EditComponent'
+
 
 const routes = new VueRouter({
 
@@ -18,28 +17,23 @@ const routes = new VueRouter({
      routes :[
         {
             path: '/',
+            component: Login,
+            name: 'login'
+
+        },
+        {
+            path: '/forgot-password',
+            component: ForgotPassword,
+            name: 'forgot-password'
+
+        },
+        {
+            path: '/dashboard',
             component: Dashboard,
             name: 'dashboard'
 
         },
 
-        {
-            path: '/category',
-            component: CategoryList,
-            name: 'category'
-        },
-
-         {
-            path: '/category-create',
-            component: CategoryCrate,
-            name: 'category-create'
-        },
-
-         {
-            path: '/category-edit/:id',
-            component: CategoryEdit,
-            name: 'category-edit'
-        },
 
     ]
 

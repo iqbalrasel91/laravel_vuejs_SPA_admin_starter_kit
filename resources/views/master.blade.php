@@ -154,6 +154,7 @@
 										<li>
 											<a href="#" class="clearfix">
 												<figure class="image">
+												<img :src="'/assets/images/!sample-user.jpg'"  alt="Joe Junior" class="img-circle">
 													<img src="{{ asset('assets/images/!sample-user.jpg') }}" alt="Joe Junior" class="img-circle" />
 												</figure>
 												<span class="title">Joe Junior</span>
@@ -278,7 +279,10 @@
 
 		</section>
 		</div>
+		
 		<script type="text/javascript"  src="{{ asset('js/app.js') }}"></script>
+
+
 		<!-- Vendor -->
 		<script src="{{ asset('assets/vendor/jquery/jquery.js') }}"></script>
 		<script src="{{ asset('assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js') }}"></script>

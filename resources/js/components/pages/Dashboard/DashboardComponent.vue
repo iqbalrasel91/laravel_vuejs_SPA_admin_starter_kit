@@ -1,4 +1,5 @@
 <template>
+@extends('master')
     <section role="main" class="content-body">
         <header class="page-header">
             <h2>Left Sidebar Collapsed Layout</h2>
@@ -37,7 +38,9 @@
                                         </strong>
                                     </h2>
 
-
+	                                 <div id="salesSelectorItems" class="chart-data-selector-items mt-sm">
+											
+									 </div>
 
                                 </div>
                             </div>
