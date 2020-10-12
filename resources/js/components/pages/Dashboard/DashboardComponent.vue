@@ -1,5 +1,4 @@
 <template>
-@extends('master')
     <section role="main" class="content-body">
         <header class="page-header">
             <h2>Left Sidebar Collapsed Layout</h2>

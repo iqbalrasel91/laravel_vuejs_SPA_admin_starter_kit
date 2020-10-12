@@ -10,6 +10,8 @@ import ForgotPassword from '../components/pages/login/ForgotPasswordComponent.vu
 import Dashboard from '../components/pages/Dashboard/DashboardComponent.vue'
 
 
+import mainLayout from '../components/pages/layout/main.vue'
+
 const routes = new VueRouter({
 
     //php artisan serve na dile mode history kaj kore na
@@ -17,8 +19,28 @@ const routes = new VueRouter({
      routes :[
         {
             path: '/',
-            component: Login,
-            name: 'login'
+            component: mainLayout,
+            name: 'login',
+            children: [
+                {
+                    path: '/',
+                    component: Login
+                }
+         
+            ]
+
+        },
+        {
+            path: '/',
+            component: mainLayout,
+            name: 'dashboard',
+            children: [
+                {
+                    path: '/dashboard',
+                    component: Dashboard
+                }
+         
+            ]
 
         },
         {

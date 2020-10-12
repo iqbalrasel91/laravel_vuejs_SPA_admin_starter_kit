@@ -15,10 +15,7 @@
 
 
 Route::get('/{any}', function () {
-    return view('login');
+    return view('master');
 })->where('any', '.*');
 
 
-Route::get('/dashboard', function () {
-    return view('master');
- });

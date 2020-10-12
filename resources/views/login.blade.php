@@ -38,7 +38,7 @@
 	<body>
         <div id="login">
 		<!-- start: page -->
-        <router-view></router-view>
+      	  <router-view></router-view>
 		<!-- end: page -->
         </div>
 

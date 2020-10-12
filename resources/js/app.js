@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import routes from './router/index'
+import routes from './router/route.js'
 require('./bootstrap');
 
 import CxltToastr from 'cxlt-vue2-toastr'
@@ -14,7 +14,7 @@ Vue.use(CxltToastr, toastrConfigs)
 window.Vue = require('vue');
 
 const app = new Vue({
-    el: '#login',
+    el: '#app',
     router: routes,
 
 });
