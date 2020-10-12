@@ -21,6 +21,7 @@ const routes = new VueRouter({
             path: '/',
             component: mainLayout,
             name: 'login',
+            meta: { loginlayout: true },
             children: [
                 {
                     path: '/',
@@ -34,6 +35,7 @@ const routes = new VueRouter({
             path: '/',
             component: mainLayout,
             name: 'dashboard',
+            meta: { loginlayout: false },
             children: [
                 {
                     path: '/dashboard',
