@@ -80,7 +80,6 @@
 		},
 		methods:{
 			login(){
-
 				this.$router.push({ name: 'dashboard' });
 				console.log('Login clicked.')
 			}

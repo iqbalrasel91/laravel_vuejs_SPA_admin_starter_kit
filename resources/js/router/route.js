@@ -11,20 +11,22 @@ import Dashboard from '../components/pages/Dashboard/DashboardComponent.vue'
 
 
 import mainLayout from '../components/pages/layout/main.vue'
+import loginMainLayout from '../components/pages/layout/login-main.vue'
 
 const routes = new VueRouter({
 
     //php artisan serve na dile mode history kaj kore na
      mode : 'history',
+     linkActiveClass: 'nav-active',
      routes :[
         {
             path: '/',
-            component: mainLayout,
-            name: 'login',
-            meta: { loginlayout: true },
+            component: loginMainLayout,
+          //  meta: { componentShow: false },
             children: [
                 {
                     path: '/',
+                    name: 'login',
                     component: Login
                 }
          
@@ -32,31 +34,33 @@ const routes = new VueRouter({
 
         },
         {
-            path: '/',
+            path: '/dashboard',
             component: mainLayout,
-            name: 'dashboard',
-            meta: { loginlayout: false },
             children: [
                 {
                     path: '/dashboard',
+                    name: 'dashboard',
                     component: Dashboard
                 }
          
             ]
 
         },
-        {
-            path: '/forgot-password',
-            component: ForgotPassword,
-            name: 'forgot-password'
 
-        },
-        {
-            path: '/dashboard',
-            component: Dashboard,
-            name: 'dashboard'
+         {
+             path: '/forgot-password',
+             component: loginMainLayout,
+             children: [
+                 {
+                     path: '/forgot-password',
+                     name: 'forgot-password',
+                     component: ForgotPassword
+                 }
 
-        },
+             ]
+
+         },
+
 
 
     ]

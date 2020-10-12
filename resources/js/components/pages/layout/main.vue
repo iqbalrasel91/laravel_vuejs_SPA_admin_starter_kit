@@ -23,25 +23,16 @@
     export default {
        data(){
             return {
-              
+
             }
         },
 
        components: {
             AppHeader, AppSidebar
         },
-	 methods: {
-		loginlayout() {
-			if(this.$route.path("/") || this.$route.path("/login")) {
-			this.homePage = true
-			} else {
-			this.homePage = false
-			}
-		}
-    }
 
 
 
-    }
+	}
 </script>
 
